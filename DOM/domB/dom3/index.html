@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traversing the DOM</title>
+</head>
+<body>
+<div id="container">
+    <div id="previous"></div>
+    <a href="#">This link goes nowhere!</a>
+    <button onclick="console.log(container.childNodes.length)"> childNodes</button>
+    <button onclick="console.log(container.children.length)"> children</button>
+    <button onclick="console.log(link.nextElementSibling)"> querySelector("a");</button>
+
+</div>
+</body>
+<script src="script.js"></script>
+</html>
