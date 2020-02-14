@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="custom-text-selection">Select some of this text.</p>
+</body>
+    <style>
+
+        ::selection {
+            background: aquamarine;
+            color: black;
+        }
+        .custom-text-selection::selection {
+            background: deeppink;
+            color: white;
+        }
+    </style>
+</html>
