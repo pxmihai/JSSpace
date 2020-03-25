@@ -41,14 +41,12 @@ let voters = [
 ];
 console.log(totalVotes(voters)); // 7
 
-
 //4) Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
 
 function shoppingSpree(arr) {
     // return arr.reduce( (a,b)=>( {price: a.price + b.price  }));
     return  arr.reduce( (total,{price}) => total + price ,0);
 }
-
 let wishlist = [
     { title: "Tesla Model S", price: 90000 },
     { title: "4 carat diamond ring", price: 45000 },
@@ -56,21 +54,36 @@ let wishlist = [
     { title: "Gold fidgit spinner", price: 2000 },
     { title: "A second Tesla Model S", price: 90000 }
 ];
-
 console.log(shoppingSpree(wishlist)); // 227005
 
 //5) Given an array of arrays, flatten them into a single array
 
 function flatten(arr) {
-
     // return arr;
     return arr.reduce(( flatten,arr ) =>[...flatten, ...arr ]);
 }
-
 let arrays = [
     ["1", "2", "3"],
     [true],
     [4, 5, 6]
 ];
-
 console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
+
+//6) Given an array of potential voters, return an object representing the results of the vote
+
+//let voters= defined earlier
+
+function voterResults(arr) {
+    // your code here
+}
+
+console.log(voterResults(voters)); // Returned value shown below:
+/*
+{ youngVotes: 1,
+  youth: 4,
+  midVotes: 3,
+  mids: 4,
+  oldVotes: 3,
+  olds: 4
+}
+*/
