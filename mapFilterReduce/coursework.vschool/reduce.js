@@ -46,7 +46,7 @@ console.log(totalVotes(voters)); // 7
 
 function shoppingSpree(arr) {
     // return arr.reduce( (a,b)=>( {price: a.price + b.price  }));
-    return  arr.reduce( (total,{price}) => total +price ,0);
+    return  arr.reduce( (total,{price}) => total + price ,0);
 }
 
 let wishlist = [
@@ -58,3 +58,19 @@ let wishlist = [
 ];
 
 console.log(shoppingSpree(wishlist)); // 227005
+
+//5) Given an array of arrays, flatten them into a single array
+
+function flatten(arr) {
+
+    // return arr;
+    return arr.reduce(( flatten,arr ) =>[...flatten, ...arr ]);
+}
+
+let arrays = [
+    ["1", "2", "3"],
+    [true],
+    [4, 5, 6]
+];
+
+console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
