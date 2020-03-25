@@ -110,15 +110,13 @@ function voterResults(arr) {
             result.youth++;
         }
         if (m.includes(voters[i].age)) {
-            console.log(voters[i].age);
+            // console.log(voters[i].age);
             result.mids++;
         }
-
         if (m.includes(voters[i].age)) {
-            console.log(voters[i].age);
+            // console.log(voters[i].age);
             result.olds++;
         }
-
         if (voters[i].voted==true && y.includes(voters[i].age)) {
             result.youngVotes++;
         }
@@ -130,10 +128,7 @@ function voterResults(arr) {
         {
             result.oldVotes++;
         }
-
     }
-
-
 
     return result;
 }
