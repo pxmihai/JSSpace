@@ -24,13 +24,23 @@ let tick=32;
 )();
 
 let pilot={};
-const add=function(a,b){return console.log(a+ " and " + b)};
+const add=function(a,b){
+    return console.log(a+ " and " + b)};
 add(1,2);
+
+(
+    function(a,b,c){
+        console.log(a+b+c);
+    }
+)(1,2,99);
+
 const other= () => {
-    first= add(1,2);
+   let  first= add(4,4);
 
 
 }
+other();
+
 
 let sampleArray=[1,2,3,4,5];
 
