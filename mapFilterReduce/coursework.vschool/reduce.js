@@ -71,12 +71,72 @@ console.log(flatten(arrays)); // ["1", "2", "3", true, 4, 5, 6];
 
 //6) Given an array of potential voters, return an object representing the results of the vote
 
-//let voters= defined earlier
+// let voters = [
+//     {name:'Bob' , age: 30, voted: true},
+//     {name:'Jake' , age: 32, voted: true},
+//     {name:'Kate' , age: 25, voted: false},y
+//     {name:'Sam' , age: 20, voted: false},y
+//     {name:'Phil' , age: 21, voted: true},y
+//     {name:'Ed' , age:55, voted:true},
+//     {name:'Tami' , age: 54, voted:true},
+//     {name: 'Mary', age: 31, voted: false},
+//     {name: 'Becky', age: 43, voted: false},
+//     {name: 'Joey', age: 41, voted: true},
+//     {name: 'Jeff', age: 30, voted: true},
+//     {name: 'Zack', age: 19, voted: false}y
+// ];
 
 function voterResults(arr) {
-    // your code here
-}
+        let result={
+            youngVotes:0,
+            youth:0,
+            midVotes:0,
+            mids:0,
+            oldVotes:0,
+            olds:0
+        };
 
+    let r = (s, e) => Array.from('?'.repeat(e - s+1), (_, i) => s + i);
+
+    let youth =[18,25];
+    let mids =[26,35];
+    let olds =[36,55];
+    let y=r(youth[0], youth[1]);console.log(y);
+    let m=r(mids[0], mids[1]);console.log(m);
+    let o=r(olds[0], olds[1]);console.log(o);
+    //age + voted:true
+    for(let i=0;i<voters.length;i++){
+        if (y.includes(voters[i].age)) {
+            result.youth++;
+        }
+        if (m.includes(voters[i].age)) {
+            console.log(voters[i].age);
+            result.mids++;
+        }
+
+        if (m.includes(voters[i].age)) {
+            console.log(voters[i].age);
+            result.olds++;
+        }
+
+        if (voters[i].voted==true && y.includes(voters[i].age)) {
+            result.youngVotes++;
+        }
+        if (voters[i].voted==true&&m.includes(voters[i].age))
+        {
+            result.midVotes++;
+        }
+        if(voters[i].voted==true&& o.includes(voters[i].age))
+        {
+            result.oldVotes++;
+        }
+
+    }
+
+
+
+    return result;
+}
 console.log(voterResults(voters)); // Returned value shown below:
 /*
 { youngVotes: 1,
