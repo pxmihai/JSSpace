@@ -97,13 +97,14 @@ function voterResults(arr) {
         };
 
     let r = (s, e) => Array.from('?'.repeat(e - s+1), (_, i) => s + i);
+    
 
     let youth =[18,25];
     let mids =[26,35];
     let olds =[36,55];
-    let y=r(youth[0], youth[1]);console.log(y);
-    let m=r(mids[0], mids[1]);console.log(m);
-    let o=r(olds[0], olds[1]);console.log(o);
+    let y=r(youth[0], youth[1]);/*console.log(y);*/
+    let m=r(mids[0], mids[1]);/*console.log(m);*/
+    let o=r(olds[0], olds[1]);/*console.log(o);*/
     //age + voted:true
     for(let i=0;i<voters.length;i++){
         if (y.includes(voters[i].age)) {
@@ -117,17 +118,25 @@ function voterResults(arr) {
             // console.log(voters[i].age);
             result.olds++;
         }
-        if (voters[i].voted==true && y.includes(voters[i].age)) {
-            result.youngVotes++;
-        }
-        if (voters[i].voted==true&&m.includes(voters[i].age))
-        {
-            result.midVotes++;
-        }
-        if(voters[i].voted==true&& o.includes(voters[i].age))
-        {
-            result.oldVotes++;
-        }
+      //   if (voters[i].voted==true && y.includes(voters[i].age)) {
+      //       result.youngVotes++;
+      //   }
+      //    else if (voters[i].voted==true && m.includes(voters[i].age))
+      //   {
+      //       result.midVotes++;
+      //   }
+      // else  if(voters[i].voted==true && o.includes(voters[i].age))
+      //   {
+      //       result.oldVotes++;
+      //   }
+        (voters[i].voted==true && y.includes(voters[i].age)) ?result.youngVotes++:
+        (voters[i].voted==true && m.includes(voters[i].age)) ?result.midVotes++:
+        (voters[i].voted==true && o.includes(voters[i].age)) ?result.oldVotes++:
+                0;
+
+
+
+
     }
 
     return result;
