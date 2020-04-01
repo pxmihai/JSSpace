@@ -1,17 +1,4 @@
-// main(9);
-// console.log("--------");
-// main(10);
-// console.log("--------");
-// main(11);
-// console.log("--------");
-// main(12);
-// console.log("--------");
-main(1);
-main(2);
-main(3);
-main(4);
-main(5);
-main(8);
+
 main(3694);
 
 
@@ -24,22 +11,17 @@ function main(input){
         b=2*a;
         c=a+b;
         d+=c;
-        console.log("aul: "+a);
-        console.log("beul: "+b);
-        console.log("ceul: "+c);
-        console.log("deul: "+d);
-        console.log("--------");
 
     }
 
-    console.log("finale " +a+" "+b+" "+c+" "+d);
+    console.log("final " +a+" "+b+" "+c+" "+d);
 
 
     let r=c-(d-input);
     if (r<=a) {
-        console.log("Se termina in a cu: "+ r)
+        console.log("Ends with a  : "+ r)
     }
-    else console.log("Se termina in b cu: " + (r-a));
+    else console.log("Ends with b: " + (r-a));
 
 
 
