@@ -17,11 +17,11 @@ function main(input){
             return { id: index + 1, value1 };
         }
     );
-    let other1=input.split("\n").map(line => line.split(" ").map(BigInt))
+    let other1=input.split("\n").map(line => line.split(" ").map(Number))
     let other2=input.split("\n").map((line,ridx) => line.split(" ").map(BigInt).reduce((acc, x, j) => (acc["value" + (j+1)] = x, acc), ({id:ridx})))
 
-    console.log(other1);
-    console.log(other2);
+    // console.log(other1);
+    // console.log(other2);
     // console.log(split.length);
     // let result1="";
     // for ( i=0;i<split.length;i++){
@@ -39,9 +39,19 @@ function main(input){
 //      let result = input.split("\n").map(r => r.split(" ").map(BigInt));
 //      result.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + v); return acc; }, []);
 //     console.log(result);
-    var split = "3\n1 2 3\n1 2 3".split("\n").map(r => r.split(" ").map(BigInt));
+//     let split = input.split("\n").map(r => r.split(" ").map(BigInt));
+//
+//     var finale=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + v); return acc; }, []);
+//     console.log(finale);
 
-    var finale=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + v); return acc; }, []);
-    console.log(finale);
 
+    // var split = "3\n1 2 3\n1 2 3".split("\n").map(r => r.split(" ").map(BigInt));
+    // let result=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + split[0][0] + v); return acc; }, [])
+
+    var split = input.split("\n").map(r => r.split(" ").map(Number));
+    var result=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0) + v); return acc; }, []);
+    var final=result.join(" ");
+    console.log(split);
+    console.log(result);
+    console.log(final);
 }
