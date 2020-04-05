@@ -20,7 +20,7 @@ function main(input){
     //
     //     result1+=(split[i].value1+split[i].value2+"\n");
     // }
-   let result2=  split.map(o => ({ id: o.id, value: o.value1 + o.value2 }));
+    let result2=  split.map(o => ({ id: o.id, value: o.value1 + o.value2 }));
     let final=result2.map(x => x.value).join("\n");
     // put input in an arraylet a=a;
    // create another array with results

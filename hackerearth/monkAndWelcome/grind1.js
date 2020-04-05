@@ -12,11 +12,6 @@ let number="31 3131 3133 31 13  20 10 10";
     console.log(typeof boolG);
 
 
-
-
-
-
-
     let rosie="100 2 3 12 23 54 2 54 35 2 332 35 54 342 35".split(" ").map(Number).map(a=>a*2).map(b=>b-3).reduce((total,x)=>x+1);
 
 
