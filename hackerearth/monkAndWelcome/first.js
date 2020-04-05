@@ -45,8 +45,9 @@ function main(input){
 //     console.log(finale);
 
 
-    // var split = "3\n1 2 3\n1 2 3".split("\n").map(r => r.split(" ").map(BigInt));
-    // let result=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + split[0][0] + v); return acc; }, [])
+     var split3 = input.split("\n").map(r => r.split(" ").map(BigInt));
+     let result3=split3.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0n) + split3[0][0] + v); return acc; }, [])
+     console.log(result3+"<");
 
     var split = input.split("\n").map(r => r.split(" ").map(Number));
     var result=split.slice(1).reduce((acc,x) => { x.forEach((v, i) => acc[i] = (acc[i]||0) + v); return acc; }, []);
