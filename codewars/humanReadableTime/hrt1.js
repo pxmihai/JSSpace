@@ -1,6 +1,6 @@
 // https://gomakethings.com/how-to-convert-seconds-to-minutes-and-hours-with-vanilla-js/
 // https://www.codewars.com/kata/52685f7382004e774f0001f7
-humanReadable(359999);
+humanReadable(2424);
 
 function humanReadable(seconds) {
     let hours = Math.floor(seconds / 60 / 60);
