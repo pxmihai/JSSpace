@@ -5,7 +5,7 @@ const coder = {
     isStudying : false,
     printIntroduction : function(){
         console.log(`My name is ${this.name}. Am I  
-          studying?: ${this.isStudying}.`)
+          studying??!?!!?!: ${this.isStudying}.`)
     }
 }
 // Object.create() method
@@ -18,3 +18,28 @@ me.name = 'Mukul';
 me.isStudying = 'True';
 
 me.printIntroduction();
+
+//Object.create() exemplu
+// obiect simplu cu cateva proprietati
+
+const programator={
+    elStudiaza:true,
+
+    printeazaIntro:function(){
+        console.log(`Numele meu este ${this.nume} Eu 
+        studiez?: ${this.elStudiaza}. `)
+    }
+}
+
+//Metoda Object.create()
+const eu=Object.create(programator);
+
+//'nume' e o proprietate a eu dar nu si a "programator"
+eu.nume='Ion Creanga';
+eu.elStudiaza='False';
+
+eu.printeazaIntro();
+
+
+let uite1=true;
+let uite2=false;

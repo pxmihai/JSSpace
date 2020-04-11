@@ -16,3 +16,20 @@ let person = {
 }
 console.log(person.getFunction());
 console.log(person.phone_number.landline);
+
+let persoana={
+    nume:'Toparceanu',
+    prenume:'George',
+    //metoda
+    afiseazaNume:function(){
+        return(`numele persoanei este 
+            '${persoana.nume} ${person.last_name}`)
+    },
+    // obiect in obiect
+    numar_telefoon:{
+        mobil:'0774/123/123',
+        fix:'#9999'
+    }
+}
+console.log(persoana.afiseazaNume());
+console.log(persoana.numar_telefoon.mobil);
