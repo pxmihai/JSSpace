@@ -9,7 +9,6 @@ console.log(twosDifference(input));
 function stupid(a,b){
     if (a>b)return a-b;
     if (a<b)return b-a;
-
 }
 function twosDifference(input){
     let answer=[];
@@ -22,8 +21,6 @@ function twosDifference(input){
         if( stupid(a,b)==2&&b>a) {
               answer.push([a,b])}
          }
-
-   // console.log(stupid(2,3)) ;
     return answer;
 }
 
