@@ -2,18 +2,21 @@ function ok(){
     console.log("------------");
 }
 // strings
-let name = "Nicholas";
-let selection = "a";
+
+{
+    let name = "Nicholas";
+    let selection = "a";
 // numbers
-let count = 25;
-let cost = 1.51;
+    let count = 25;
+    let cost = 1.51;
 // boolean
-let found = true;
+    let found = true;
 // null
-let object = null;
+    let object = null;
 // undefined
-let flag = undefined;
-let ref; // assigned undefined automatically
+    let flag = undefined;
+    let ref; // assigned undefined automatically
+    }
 
 
 let color1 = "red";
@@ -42,7 +45,7 @@ ok()
     console.log(undefined === null); // false
     }
 
-//Primitive Methods
+//Primitive Methods 6
 {
     let name = "Nicholas";
     let lowercaseName = name.toLowerCase(); // convert to lowercase
@@ -60,6 +63,37 @@ ok();
 {
     let object = new Object();
 
-    object[0]=32;
-    object[3].banana=14;
+        object.a=ok();
+        object[0]=32;
+        object[3]=12;
+        object.stuff=[1,2,3];
+        console.log(object);
+
+
+
+
 }
+
+ok();
+
+{
+
+    let object=
+    [
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }
+    ]
+
+    console.log(object);
+}
+
+
+
+
