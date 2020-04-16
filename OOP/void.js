@@ -5,6 +5,7 @@ let fruit=class fruit{
         this.broccoli=broccoli;
     }
 
-    let value=32;
+    // let value=32;
 
 }
+

@@ -59,4 +59,7 @@ ok();
 
 {
     let object = new Object();
+
+    object[0]=32;
+    object[3].banana=14;
 }
