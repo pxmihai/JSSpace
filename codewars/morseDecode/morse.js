@@ -1,6 +1,6 @@
 //(decodeMorse('.... . -.--   .--- ..- -.. .'), 'HEY JUDE')
-let me="−− ·− ·−· ·−· −·−−  ···· ·− −··  ·−  ·−·· ·· − − ·−·· ·  ·−·· ·− −− −··· ";/*MARRY HAD A LITTLE LAMB*/
-decodeMorse(me);
+let morse="−− ·− ·−· ·−· −·−−  ···· ·− −··  ·−  ·−·· ·· − − ·−·· ·  ·−·· ·− −− −··· ";/*MARRY HAD A LITTLE LAMB*/
+decodeMorse(morse);
 function decodeMorse (morseCode){
 
     const phrase=morseCode;
@@ -11,14 +11,12 @@ function decodeMorse (morseCode){
     for (let i=0;i<words.length;i++)
         for (let j=0;j<nested_letters[i].length;j++)
         {
-            // console.log(nested_letters[i][j]);
+            console.log((nested_letters[i][j]));
+            console.log(decode(nested_letters[i][j]));  /*WHAT AM I DOING WRONG*/
+            answer.push(decode(nested_letters[i][j]));
 
-            answer.push((nested_letters[i][j]))
-            console.log((nested_letters[i][j]))
-            console.log(decode(answer[i]))
-            console.log((answer[i]))
         }
-    console.log(answer);
+    console.log(">> "+answer);
     // for (let key in alphabet) {
     //
     //     if(alphabet.hasOwnProperty(letter)){
@@ -28,12 +26,9 @@ function decodeMorse (morseCode){
     //     }
     //
     // }
-
 }
-
 // console.log(decode("..---"));
 function decode(letter){
-
     let alphabet = {
         "-----":"0",
         ".----":"1",
@@ -75,8 +70,6 @@ function decode(letter){
         "-·-·--":"!",
         "·-·-·-":".",
         "--··--":","
-
     };
     return alphabet[letter];
-
 }
