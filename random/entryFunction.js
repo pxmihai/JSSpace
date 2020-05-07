@@ -14,9 +14,10 @@ let entry=function(a,b){
         console.log("Launch iminent, please clear  platform 1!");
     }
     if(typeof a=="object"){
-        console.log("This is  an object drill");
+        console.log("This is an object drill");
     }
-    if(typeof a=="object" &&a[0].hasOwnProperty(b)){
+
+    if(typeof a=="object" && a[0].hasOwnProperty("b") ){
             console.log("done")
         if (a[0].b.x[0] == 1)
             console.log("That thing has 1 as value");
@@ -38,13 +39,17 @@ console.log(adventure[0].b.x[0])
     //[ { a: 1, b: { x: [Array] } } ]
     // 1
 entry(adventure,34);
+    // [ { a: 1, b: { x: [Array] } } ]
     // object
     // number
     // This is  an object drill
+    // done
+    // That thing has 1 as value
+    // Welcome to the twilight zone
     // upgrades
     // a exists
-    // a has property b
-    // a has property b.x
+    // a has value a[0]
+    // a has property/value a[0].b
 entry("!","?");
     // !
     // string
