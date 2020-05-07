@@ -28,9 +28,9 @@ let entry=function(a,b){
     if(a)
         console.log("a exists")
     if(typeof a=="object"&& a[0])
-        console.log("a has property a[0]")
+        console.log("a has value a[0]")
     if(typeof a=="object"&& a[0].b)
-        console.log("a has property a[0].b")
+        console.log("a has property/value a[0].b")
 }
 
 console.log(adventure);
