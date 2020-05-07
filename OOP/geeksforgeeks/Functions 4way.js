@@ -1,6 +1,8 @@
-if(0){
-    // https://www.reddit.com/r/webdev/comments/a71rzg/javascript_functions_4_ways/
-// function declaration
+// if(0){
+//     // https://www.reddit.com/r/webdev/comments/a71rzg/javascript_functions_4_ways/
+
+// // function declaration
+
 // function 4 ways
     function square(x){
         return x*x;
@@ -20,7 +22,7 @@ if(0){
 //Concise Arrow Function Expression
     const square =x=> x * x;
 
-}
+
 
 
 
