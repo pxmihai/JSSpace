@@ -1,0 +1,1 @@
+// http://dmitrysoshnikov.com/ecmascript/chapter-6-closures/
