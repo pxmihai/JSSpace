@@ -55,9 +55,10 @@ if(0){
             isPrime = false;
             break;
         }
+        if (isPrime)
+            console.log("The number "+i+" is prime.")
     }
-    if (isPrime)
-    console.log("The number "+i+" is prime.")
+
 
 });
 
