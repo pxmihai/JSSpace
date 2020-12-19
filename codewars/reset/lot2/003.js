@@ -186,7 +186,7 @@ class left {
 
 let elementOne = new left();
 
-let
+
 
 
 
