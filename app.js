@@ -3,10 +3,10 @@ const path = require('path');
 
 
 
-import {add} from './data';
-console.log(add(2, 3));
+// import {add} from './data';
+// console.log(add(2, 3));
 
-import {increase} from './modules/module';
+import {increase} from './modules/module.js';
 let pathObj = path.parse(__filename);
 // console.log(pathObj);
 console.log(increase());
