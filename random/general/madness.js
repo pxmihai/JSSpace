@@ -1,29 +1,61 @@
-function at01(){
-    console.log("t01")
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+let log = (...args) => {
+    if (typeof (console) !== 'undefined')
+        console.log(...args)
+};
+
+let global = [11, 12];
+let a, b;
+[a, b] = [...global];
+log(a, b);
+
+let at01 = () => {
+    log("t01");
     at02();
-    function at001() {
-        console.log("at001")
+
+    let at001 = () => {
+        log("at001");
+        at02();
     }
 
-    function at002() {
-        console.log("at002")
+    at001();
+
+    let at002 = () => {
+        log("at002");
+        at02();
     }
 
-    function at003() {
-        console.log("at003")
+    at002();
 
-        function at0001() {
-            console.log("at0001")
+    let at003 = () => {
+        log("at003");
+        at02();
+        at002();
 
-            function at00001() {
-                console.log("at00001")
+        // at01();
+
+        let at0001 = () => {
+            log("at0001");
+            at02();
+
+            let at00001 = () => {
+                log("at00001");
+                at02();
             }
+
+            at00001();
         }
+
+        at0001();
+
     }
+
+    at003();
 }
 
-function at02(){
-    console.log("at02")
+let at02 = () => {
+    log("at02");
 }
+
 at02();
 at01();
