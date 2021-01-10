@@ -21,14 +21,18 @@
 //
 // validator(boolArray,studentMath);
 
+
+
 const validator = (bools, people) => {
 
     let studentsScore = {}
 
-    const numToBool = Object.keys(people).map(student => people[student].map((studentChoice, idx) => studentChoice === 0 ? false : true))
-    const findScore = numToBool.map((arr, idx) => arr.map((el, id) => el === bools[id] ? 1 : 0))
-    const scoreArr = findScore.map(arr => arr.reduce((acc, current) => acc + current ))
-    const obj = Object.keys(people).map((student, idx) => studentsScore[student] = scoreArr[idx] )
+    const numToBool = Object.keys(people).map(student => people[student].map((studentChoice, idx) => studentChoice === 0 ? false : true));
+    console.log(numToBool);
+    const findScore = numToBool.map((arr, idx) => arr.map((el, id) => el === bools[id] ? 1 : 0));
+    console.log(findScore);
+    const scoreArr = findScore.map(arr => arr.reduce((acc, current) => acc + current ));
+    const obj = Object.keys(people).map((student, idx) => studentsScore[student] = scoreArr[idx] );
     return studentsScore
 }
 const boolArray=[false, false, true, false, true, false, true, true,true];
