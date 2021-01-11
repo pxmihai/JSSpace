@@ -1,3 +1,4 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor
 if (0) {
     class Polygon {
         v = "some";
@@ -12,7 +13,7 @@ if (0) {
     console.log(poly1.v);
 // expected output: "Polygon"
 }
-if (1) {
+if (0) {
     class Triple {
         static customName = 'Tripler';
         static description = 'I triple any number you provide';
@@ -44,4 +45,86 @@ if (1) {
 
     console.log(tp.triple());         // 'tp.triple is not a function'.
 
+} //some code from another place
+if (0) {
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+    }
+
+    let me = new Rectangle(1, 2)
 }
+if (0) {
+    const p = new Rectangle(); // ReferenceError
+
+    class Rectangle {
+    }
+
+} // as expected
+if (0) {
+    {// unnamed
+        let Rectangle = class {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        };
+        console.log(Rectangle.name);
+// output: "Rectangle"
+    }
+
+    {// named
+        let Rectangle = class Rectangle2 {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+        };
+        console.log(Rectangle.name);
+// output: "Rectangle2"
+    }
+}
+if (0){
+    class Person {
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        introduce() {
+            console.log(`Hello, my name is ${this.name}`);
+        }
+
+    }
+
+    const otto = new Person('Otto');
+
+    otto.introduce();
+}
+if (0){
+    class ValidationError extends Error {
+
+        printCustomerMessage() {
+            return `Validation failed :-( (details: ${this.message})`;
+        }
+
+    }
+
+    try {
+        throw new ValidationError("Not a valid phone number");
+    } catch (error) {
+        if (error instanceof ValidationError) {
+            console.log(error.name); // This is Error instead of ValidationError!
+            console.log(error.printCustomerMessage());
+        } else {
+            console.log('Unknown error', error);
+            throw error;
+        }
+    }
+} //todo come back here
+if (1){
+
+}
+
