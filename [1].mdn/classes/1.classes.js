@@ -388,18 +388,38 @@ if (0) {
 // Fuzzy makes a noise.
 // Fuzzy roars.
 
-} // basic example of some logic
-if (1){
+}
+
+
+
+
+
+
+/**
+* basic example of some logic
+* */
+
+if (1) {
     //mix ins
     let calculatorMixin = Base => class extends Base {
-        calc() { }
+        calc() {
+        }
     };
 
     let randomizerMixin = Base => class extends Base {
-        randomize() { }
+        randomize() {
+        }
     };
 
-    class Foo { }
-    class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
+    class Foo {
+    }
+
+    class Bar extends calculatorMixin(randomizerMixin(Foo)) {
+    }
 }// logic looks good, implementation unknown
+
+/**
+* testing
+* */
+let tested;
 
