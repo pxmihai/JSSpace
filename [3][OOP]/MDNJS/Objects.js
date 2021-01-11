@@ -16,7 +16,7 @@
         greeting: function () {
             console.log('Hi! I\'m ' + this.name[0] + '.');
         },
-        fuck:{
+        apple:{
             name: ['Bob', 'Smith'],
             age: 32,
             gender: 'male'
@@ -25,7 +25,7 @@
     };
 
     {
-        console.log(person.fuck.name)
+        console.log(person.apple.name)
         console.log(person.name);/*[ 'Bob', 'Smith' ]*/
         console.log(person.name[0]);
         console.log(person.name[1]);
@@ -41,6 +41,3 @@
 
 }
 
-// {
-//
-// }
