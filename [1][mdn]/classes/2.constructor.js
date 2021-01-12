@@ -86,7 +86,7 @@ if (0) {
 // output: "Rectangle2"
     }
 }
-if (0){
+if (0) {
     class Person {
 
         constructor(name) {
@@ -103,7 +103,7 @@ if (0){
 
     otto.introduce();
 }
-if (0){
+if (0) {
     class ValidationError extends Error {
 
         printCustomerMessage() {
@@ -124,7 +124,57 @@ if (0){
         }
     }
 } //todo come back here
-if (1){
+if (0) {
+    class ValidationError extends Error {
 
+        constructor(message) {
+            super(message);  // call parent class constructor
+            this.name = 'ValidationError';
+            this.code = '42';
+        }
+
+        printCustomerMessage() {
+            return `Validation failed :-( (details: ${this.message}, code: ${this.code})`;
+        }
+
+    }
+
+    try {
+        throw new ValidationError("Not a valid phone number");
+    } catch (error) {
+        if (error instanceof ValidationError) {
+            console.log(error.name); // Now this is ValidationError!
+            console.log(error.printCustomerMessage());
+        } else {
+            console.log('Unknown error', error);
+            throw error;
+        }
+    }
+
+
+} // the example here is outside the bounds of an usable example
+if (1) {
+    class Polygon {
+        constructor() {
+            this.name = "Polygon";
+        }
+    }
+
+    class Square extends Polygon {
+        constructor() {
+            super();
+        }
+    }
+
+    class Rectangle {
+    }
+
+    Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+
+    console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
+    console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+
+    let newInstance = new Square();
+    console.log(newInstance.name); //Polygon
 }
 

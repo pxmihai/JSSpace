@@ -1,15 +1,9 @@
 {
     (
-        function fuck(){
-            console.log("fuck it");
+        function apple(){
+            console.log("apple!");
         }
     )();
-    (
-        function fuck(){
-            console.log("fuck it");
-        }
-    )();
-        // fuck()
 }
 
 {

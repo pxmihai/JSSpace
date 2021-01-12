@@ -18,7 +18,7 @@ function attempt(a,b,c){
     console.log(0||3||2)
     console.log(false&&true)
     console.log( (function hello(){ return("Hello!") })() && (function world(){ return("world!") })()  )
-    console.log(1&&2&&3&&4)
+    console.log(1&&2&&3&&4);
 
 
 
