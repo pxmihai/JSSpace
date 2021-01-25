@@ -67,8 +67,7 @@ if (0) {
 
     const math = {
         'factit': function factorial(n) {
-            console.log(n)
-
+            console.log(n);
             if (n <= 1) {
                 return 1;
             }
@@ -94,22 +93,36 @@ if (0) {
     quote2; // prints: ReferenceError: quote2 is not defined
 }
 // --------------------------------------------------
-if (1){
+if (0) {
     // Function Declaration Hoisting vs. Function Expression Not Hoisting
 
     console.log(hoistedFunction()); // prints: I am a function declaration so I am hoisted to the top of the scope at run time
     function hoistedFunction() {
-    return 'I am a function declaration so I am hoisted to the top of the scope at run time';
-}
-console.log(stillNotHoisted());
+        return 'I am a function declaration so I am hoisted to the top of the scope at run time';
+    }
+
+    console.log(stillNotHoisted());
     // prints: TypeError: stillNotHoisted is not a function
-    const stillNotHoisted = function() {
-return 'I am a function expression and therefore, hoisting does not apply to me';
+    const stillNotHoisted = function () {
+        return 'I am a function expression and therefore, hoisting does not apply to me';
+    }
+    console.log(stillNotHoisted()); // prints: I am a function expression and therefore, hoisting does not apply to me
 }
-console.log(stillNotHoisted()); // prints: I am a function expression and therefore, hoisting does not apply to me
+// --------------------------------------------------
+if (1) {
+    // Anatomy of Two Basic Arrow Function Expressions
+
+    if(0){
+        const basicArrow = () => {
+            return 'The most basic of basic arrow functions';
+        }
+        console.log(basicArrow());
+        // prints: The most basic of basic arrow functions
+    }
+    const basicArrow2 = oneParam => 'Single line with ${oneParam,twoparam } is also valid';
+    console.log(basicArrow2('only one param'));
+
 }
-
-
 
 
 
