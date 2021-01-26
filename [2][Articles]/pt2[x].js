@@ -108,19 +108,49 @@ if (0) {
     }
     console.log(stillNotHoisted()); // prints: I am a function expression and therefore, hoisting does not apply to me
 }
-// --------------------------------------------------
-if (1) {
+// -------------------------------------------------- ’
+if (0) {
     // Anatomy of Two Basic Arrow Function Expressions
 
-    if(0){
+    if (0) {
         const basicArrow = () => {
             return 'The most basic of basic arrow functions';
         }
         console.log(basicArrow());
         // prints: The most basic of basic arrow functions
     }
-    const basicArrow2 = oneParam => 'Single line with ${oneParam,twoparam } is also valid';
-    console.log(basicArrow2('only one param'));
+    const basicArrow2 = oneParam => `Single line with ${oneParam} is also valid`;
+    console.log(basicArrow2('only one param')); // prints: Single line with only one param is also valid
+    const basicArrow3 = (and = 2, then = 3) => `${and}ok${then}`;
+    console.log(basicArrow3(1, 2));
+    console.log(basicArrow3());
+    const basicArrow4 = (a = [1, 2, 3]) => `${a[2]}`
+    console.log(basicArrow4());
+    const basicArrow5 = (a = {sun: 21, moon: 12}) => `${a.moon}`
+    console.log(basicArrow5());
+}
+// --------------------------------------------------
+if (1) {
+    // Traditional Function Expression:
+    if (0) {
+        let elements = ["Hydrogen", 'Helium', 'Lithium', 'Beryllium'];
+        // console.log(elements.map(function (element) {
+        //     return element.length;
+        // }));
+        // this statement returns the array: [8, 6, 7, 9]}
+
+    }
+
+    [1, {ok: 11, then: 12}, 2].map(function (a, b, c) {
+        console.log("Current value "+ a);
+        console.log("Index " + b);
+
+        console.log("[Value in the array 1] " + c[0] + " type "+ typeof c[0]);
+        console.log("[Value in the array 2] " + c[1] + " type "+ typeof c[1]);
+        console.log("[Value in the array 3] " + c[2] + " type "+ typeof c[2]);
+
+        console.log("---")
+    });
 
 }
 
