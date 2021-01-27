@@ -160,6 +160,7 @@ if (0) {
     elements.map((element) => element.length);
     // this statement still returns the same array: [8, 6, 7, 9]
 }
+// --------------------------------------------------
 if (0) {
     // No Hoisting, Only TypeErrors
     // console.log(fish());
@@ -168,6 +169,7 @@ if (0) {
     console.log(fish(1, 2));
     // prints: [ 'perch', 'salmon', 'trout', 'bass' ]
 }
+// --------------------------------------------------
 if (0) {
     function Person() {
         // The Person() constructor defines `this` as an instance of itself.
@@ -188,6 +190,7 @@ if (0) {
 
 
 }//  maybe not the best example
+// --------------------------------------------------
 if (0) {
     function Person() {
         this.age = 0;
@@ -200,6 +203,7 @@ if (0) {
     let p = new Person();
     while (1) console.log(p.age);
 } //  maybe not the best example
+// --------------------------------------------------
 if (0) {
     //arguments with Arrow Functions
 
@@ -220,6 +224,7 @@ if (0) {
     }
 
 } // come back later , why does it only work with arguments[0]? because it only receives one parameter, thus naming is confusing
+// --------------------------------------------------
 if (0) {
     // Rest Parameters Instead of arguments with Arrow Functions
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
@@ -231,10 +236,12 @@ if (0) {
 
     console.log(foo(1)); // prints: 31
 }
+// --------------------------------------------------
 if (0){
     let Foo = () => {};
     let foo = new Foo(); // prints: TypeError: Foo is not a constructor
 }
+// --------------------------------------------------
 
 // done !
 
