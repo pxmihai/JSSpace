@@ -8,7 +8,7 @@ if (0) {
     console.log(multiply(4, 9));
     // prints: 36 to the console
 }
-// --------------------------------------------------
+// --------------------------------------------------’
 if (0) {
     function returnsNothing(item1, item2) {
         item1 + item2;
@@ -108,7 +108,7 @@ if (0) {
     }
     console.log(stillNotHoisted()); // prints: I am a function expression and therefore, hoisting does not apply to me
 }
-// -------------------------------------------------- ’
+// --------------------------------------------------
 if (0) {
     // Anatomy of Two Basic Arrow Function Expressions
 
@@ -130,7 +130,7 @@ if (0) {
     console.log(basicArrow5());
 }
 // --------------------------------------------------
-if (1) {
+if (0) {
     // Traditional Function Expression:
     if (0) {
         let elements = ["Hydrogen", 'Helium', 'Lithium', 'Beryllium'];
@@ -142,17 +142,101 @@ if (1) {
     }
 
     [1, {ok: 11, then: 12}, 2].map(function (a, b, c) {
-        console.log("Current value "+ a);
+        console.log("Current value " + a);
         console.log("Index " + b);
 
-        console.log("[Value in the array 1] " + c[0] + " type "+ typeof c[0]);
-        console.log("[Value in the array 2] " + c[1] + " type "+ typeof c[1]);
-        console.log("[Value in the array 3] " + c[2] + " type "+ typeof c[2]);
+        console.log("[Value in the array 1] " + c[0] + " type " + typeof c[0]);
+        console.log("[Value in the array 2] " + c[1] + " type " + typeof c[1]);
+        console.log("[Value in the array 3] " + c[2] + " type " + typeof c[2]);
 
         console.log("---")
     });
 
 }
+// --------------------------------------------------
+if (0) {
+    //New Arrow Function Expression:
+    let elements = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+    elements.map((element) => element.length);
+    // this statement still returns the same array: [8, 6, 7, 9]
+}
+if (0) {
+    // No Hoisting, Only TypeErrors
+    // console.log(fish());
+    // prints: TypeError: fish is not a function
+    const fish = (a, b) => ['perch' + a, 'salmon' + b, 'trout' + a, 'bass' + b];
+    console.log(fish(1, 2));
+    // prints: [ 'perch', 'salmon', 'trout', 'bass' ]
+}
+if (0) {
+    function Person() {
+        // The Person() constructor defines `this` as an instance of itself.
+        this.age = 0;
+
+        setInterval(function growUp() {
+            // In non-strict mode, the growUp() function defines `this`
+            // as the global object (because it's where growUp() is executed.),
+            // which is different from the `this`
+            // defined by the Person() constructor.
+            this.age++;
+        }, 1000);
+    }
+
+    let p = new Person();
+
+    while (1) console.log(p.age);
+
+
+}//  maybe not the best example
+if (0) {
+    function Person() {
+        this.age = 0;
+
+        setInterval(() => {
+            this.age++; // |this| properly refers to the Person object
+        }, 1000);
+    }
+
+    let p = new Person();
+    while (1) console.log(p.age);
+} //  maybe not the best example
+if (0) {
+    //arguments with Arrow Functions
+
+    if (0) {
+        let arguments = [1, 2, 3];
+        let arr = () => arguments[0];
+
+        console.log(arr()); // prints: 1
+    }
+
+    if (0) {
+        function foo(n) {
+            let f = () => arguments[0] + n; // foo's implicit arguments binding. arguments[0] is n
+            return f();
+        }
+
+        console.log(foo(3)); // prints: 6
+    }
+
+} // come back later , why does it only work with arguments[0]? because it only receives one parameter, thus naming is confusing
+if (0) {
+    // Rest Parameters Instead of arguments with Arrow Functions
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+    function foo(n) {
+        let f = (...args) => args[0] +args[1] + n;
+        return f(10,20,30);
+    }
+
+    console.log(foo(1)); // prints: 31
+}
+if (0){
+    let Foo = () => {};
+    let foo = new Foo(); // prints: TypeError: Foo is not a constructor
+}
+
+// done !
 
 
 
