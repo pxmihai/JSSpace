@@ -187,10 +187,79 @@ if (0) {
     let d = new Date(...dateFields);
     console.log(d); // 13 Apr 1989
 } //ok
-if (1){
-    const fruits = ['watermelon', 'peaches'];
-    const fruitBasket = ['apples', 'grapes', ...fruits, 'bananas', 'kiwis', 'mango'];
+if (0) {
+    const fruits1 = ['watermelon', 'peaches'];
+    const fruits2 = ['strawberry', 'papaya']
+    const fruitBasket = ['apples', 'grapes', ...fruits1, 'bananas', fruits2, 'kiwis', 'mango'];
     console.log(fruitBasket); // [ 'apples', 'grapes', 'watermelon', 'peaches', 'bananas', 'kiwis', 'mango' ]
 }
+if (0) {
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1];
+    console.log(arr2); // [1, 2, 3]
+    arr2.push(4);
+    console.log(arr1); // [1, 2, 3]
+    console.log(arr2); // [1, 2, 3, 4]
+} //todo look over array proper copying
+
+if (0) {
+    // .concat() Arrays Together
+    const germanCars = ['BMW', 'Audi', 'Mercedes'];
+    const japaneseCars = ['Honda', 'Toyota', 'Datsun'];
+    const concatCarMakers = germanCars.concat(japaneseCars);
+    console.log(concatCarMakers); // [ 'BMW', 'Audi', 'Mercedes', 'Honda', 'Toyota', 'Datsun' ]
+} // as expected
+if (0) {
+    const germanCars = ['BMW', 'Audi', 'Mercedes'];
+    const japaneseCars = ['Honda', 'Toyota', 'Datsun'];
+    const carMakers = [...germanCars, ...japaneseCars];
+    console.log(carMakers);
+    // [ 'BMW', 'Audi', 'Mercedes', 'Honda', 'Toyota', 'Datsun' ]
+} // as above, as expected
+if (0) {
+    // Spread Elements into the Beginning of an Array
+    let numbers = [6, 5, 4];
+    const moreNumbers = [1, 2, 3];
+    numbers = [...moreNumbers, ...numbers];
+    console.log(numbers); // [ 1, 2, 3, 6, 5, 4 ]
+}
+
+if (0) {
+    const markerSet = {copicMarkers: ['green', 'blue', 'red']};
+    if (0) {
+        // Shallow Cloning and Merging Objects is Simple
+        // duplicate object properties
+
+        const duplicateMarkerSet = {...markerSet};
+        console.log(duplicateMarkerSet);
+        // { copicMarkers: [ 'green', 'blue', 'red' ] }
+    }
+
+    if (1) {// merge two objects into a new one
+        const markerSet2 = {copicSketchMarkers: ['pink', 'yellow', 'orange']};
+        const giantMarkerSet = {...markerSet, ...markerSet2};
+        console.log(giantMarkerSet);
+        // { copicMarkers: [ 'green', 'blue', 'red' ], copicSketchMarkers: [ 'pink', 'yellow', 'orange' ] }
+    }
+} // as expected
+if (0) {
+    if (0) {    // Spread (Aside from Object Properties) is Only for Iterables
+        // spreading in an object to an array does NOT work
+        const obj = {key1: 'value1'};
+        let array = [...obj];
+        console.log(array);
+        // []
+
+    }
+    if (1) {
+        // spreading an array of objects into another array does work
+        const objInArray = [{key2: 'value2'}];
+        array = [...objInArray];
+        console.log(array); // [ { key2: 'value2' } ]
+    }
+} //ok.. come back here
+
+// done!
+
 
 
