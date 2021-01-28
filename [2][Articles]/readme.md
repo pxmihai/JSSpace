@@ -1,0 +1,1 @@
+This folder contains the parts and examples from a few articles by Paige Niedringhaus.
